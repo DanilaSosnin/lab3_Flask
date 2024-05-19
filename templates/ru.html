@@ -1,0 +1,63 @@
+{% extends 'example.html'%}
+
+{% block langswitcher%}
+<a href="en">
+	<button id="l-switch">
+		Английская версия
+	</button>
+</a>
+{% endblock %}
+
+{% block language%}
+<html lang="ru">
+{% endblock %}
+
+{% block title%}
+Конвертер валют
+{% endblock %}
+
+{% block header%}
+Конвертер валют
+{% endblock %}
+
+{% block content%}
+<p id="subtitle">Конвертируйте свою валюту в любую другую</p>
+<div class="form-div">
+	<input type="number" name="value" placeholder="Значение" step="0.01" required min="0">
+</div>
+<div class="form-div">
+	<table>
+		<tr align="center">
+			<th class="cc--t">
+				<p>Начальная валюта</p>
+			</th>
+			<th class="cc--t">
+				<p>Конечная валюта</p>
+			</th>
+		</tr>
+		<tr align="center">
+			<td class="cc--t">
+				<select class="cb--cc" name="bc" translate="no">
+				{% for cur in currencies %}
+					<option>{{ cur }}</option>
+				{% endfor %}
+				</select>
+			</td>
+			<td class="cc--t">
+				<select class="cb--cc" name="fc" translate="no">
+				{% for cur in currencies %}
+					<option>{{ cur }}</option>
+				{% endfor %}
+				</select>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="form-div">
+	<p>
+		<input id="result" value="{% if valid %} {{ total[2] }} {{ total[0] }} = {{ total[3] }} {{ total[1] }} {% else %}  {% endif %}" readonly>
+	</p>
+</div>
+<button id="convert">Конвертировать</button>
+<input name="lang" value="RU" readonly id="lang">
+{% endblock %}

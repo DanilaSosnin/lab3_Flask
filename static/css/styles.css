@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, button, input{
+    font-family: 'Inter','Source Sans Pro', Helvetica, sans-serif;
+    color: #555555;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(background.gif) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#allcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255, 0.9);
+    width: 40svh;
+    height: 80vh;
+}
+
+#subtitle{
+	font-size: 14px;
+}
+
+form{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-div{
+}
+button{
+    border: 0;
+    color: #e0f0f0;
+    cursor: pointer;
+    width: 40svh;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 3vh;
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    outline: none;
+}
+
+.cc--t{
+    width: 200px;
+}
+
+.cb--cc{
+    font-size: 18px;
+}
+
+#l-switch{
+	width: 40svh;
+    height: 50px;
+}
+
+form + span{
+    display: flex;
+    justify-content: center;
+}
+input{
+    border: inset;
+    outline: none;
+    font-size: 16px;
+    background: rgba(0,0,100,0.25);
+    transition: 0.3s;
+    margin-bottom: 3vh;
+}
+
+input:focus:invalid{
+    background: rgba(200, 0, 0, 0.5);
+}
+.error{
+    display: none;
+}
+input:focus:invalid ~ .error{
+    display: block;
+    color: rgba(200, 0, 0, 0.5);
+}
+
+#lang{
+    display: none;
+}
+
+#result{
+    border: outset;
+    outline: none;
+    font-size: 18px;
+    background: rgba(150, 200, 0, 0.6);
+    width: 30svh;
+    transition: 0.3s;
+    margin-bottom: 3vh;
+}

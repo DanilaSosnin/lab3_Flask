@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%block language%}{%endblock%}
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div id="allcontent">
+	{%block langswitcher%}{%endblock%}
+	<h1>{%block header%}{%endblock%}</h1>
+	<form action="convert" method="post">
+		{%block content%}{%endblock%}
+	</form>
+</div>
+<script></script>
+</body>
+</html>
